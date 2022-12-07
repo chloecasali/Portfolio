@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+}
+p {
+    margin: 0;
+    margin-top: 38px;
+    align-content: center;
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Josefin Sans';
+}
+.logo {
+    width: 80px;
+    height: 80px;
+}
+
+header nav ul {
+    margin-top: 40px;
+    display: flex;
+    align-content: center;
+    gap: 30px;
+    color: white;
+}
+
+.download-cv-button {
+    font-family: 'Josefin Sans';
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    padding: 20px; 
+}
