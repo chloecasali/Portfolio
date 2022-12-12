@@ -40,6 +40,7 @@ header {
     font-size: 18px;
     margin-top: 50px;
     display: flex;
+    /*postion: fixed to get the navbar while scrolling */
     align-content: center;
     letter-spacing: 0.5px;
     gap: 50px;
@@ -102,6 +103,73 @@ header {
     color: black;
 }
 
+.main-wrapper {
+    max-width: 1400px;
+    margin: auto;
+}
+
+section {
+    width: 100%;
+    padding: 20px;
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-section {
+    font-family: 'Inconsolata', 'Sans-sérif';
+    letter-spacing: 5px;
+    font-size: 50px;
+    font-weight: 100;
+    margin: 0;
+}
+
+.div-about {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 10px;
+} 
+
+.about-me-text {
+    width: 50%;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing:0.5px;
+    line-height: 25px;
+    word-spacing: 2px;
+}
+
+.first-name {
+    color: #4ff3ee;
+}
+
+
+.image-container {
+    width: 550px;
+    height: 550px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.image {
+    width: 100%;
+    height: 550px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.rectangular-cards {
+    width: 60%;
+    height: 100px;
+    background-color: #090c9b;
+
+}
+
 
 
 
@@ -125,7 +193,6 @@ footer
 {
     display: flex;
     justify-content: space-around;
-    border-top: 1px solid white;
     margin-top: 1500px;
     padding-top: 70px;
     padding-bottom: 70px;
