@@ -124,6 +124,10 @@ section {
     margin: 0;
 }
 
+#About {
+    margin-top: 1500px;
+}
+
 .div-about {
     width: 100%;
     margin-top: 50px;
