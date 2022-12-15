@@ -40,7 +40,7 @@ header {
     font-size: 18px;
     margin-top: 50px;
     display: flex;
-    /*postion: fixed to get the navbar while scrolling */
+    /*position: fixed to get the navbar while scrolling */
     align-content: center;
     letter-spacing: 0.5px;
     gap: 50px;
@@ -103,6 +103,17 @@ header {
     color: black;
 }
 
+
+.welcoming-message {
+    font-family: 'Inconsolata', 'Sans-sérif';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 300px;
+    gap: 150px;
+    font-size: 100px;
+}
+
 .main-wrapper {
     max-width: 1400px;
     margin: auto;
@@ -130,15 +141,15 @@ section {
     font-size: 50px;
     font-weight: 100;
     margin: 0;
+    margin-bottom: 50px;
 }
 
 #About {
-    margin-top: 1500px;
+    margin-top: 760px;
 }
 
 .div-about {
     width: 100%;
-    margin-top: 50px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -211,8 +222,79 @@ section {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-row-gap: 100px;
-
 }
+
+/* nouveau modèle de card*/
+
+.div-education {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-row-gap: 100px;
+}
+
+.education-card-edit {
+    width: 100%;
+    border: 3px solid black;
+    background-color: black;
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px #4ff3ee);
+}
+
+.card-content {
+    padding: 30px 15px 30px 15px;
+}
+
+.card-title-edit {
+    margin: 0;
+    margin-bottom: 6px;
+    padding: 0;
+    color: #4ff3ee;
+    font-size: 20px;
+}
+
+.card-subtitle {
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+}
+
+.tags {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    color: #4ff3ee;
+    cursor: pointer;
+}
+
+.tags-decoration {
+    border: 2px solid white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 200ms;
+}
+
+.tags-decoration:hover {
+    background-color: white;
+}
+
+.card-description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card-description p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 6px;
+}
+
+
+
+
+
 
 .card-title {
     position: relative;
@@ -327,3 +409,18 @@ footer ul {
     gap: 15px;
 }
 
+
+
+
+.contact-form {
+    width: 50%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.form-cases {
+    gap: 100px;
+}
