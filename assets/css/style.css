@@ -186,51 +186,15 @@ section {
 }
 
 
-.education-cards {
-    position: relative;
-    cursor: pointer;
-    width: 80%;
-    height: 200px;
-    border-radius: 10px;
-    filter: drop-shadow(0px 3px 15px rgba(131, 120, 120, 0.7));
-    transform: scale(1);
-    transition: all 200ms;
-}
 
-.education-cards:hover {
-    transform: scale(1.05);
-}
 
-.image-card {
+.div-education {
     width: 100%;
-    height: 200px;
-    object-position: center 60%;
-    border: 4px solid black;
-    border-radius: 10px;
-}
-
-.covered {
-    object-fit: cover;
-}
-
-.cadrage {
-    object-fit: cover 100%;
-}
-
-.div-education {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-row-gap: 100px;
-}
-
-/* nouveau modèle de card*/
-
-.div-education {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-row-gap: 100px;
+    grid-template-columns: 70% 30%;
+    grid-row-gap: 35px;
+    grid-column-gap: 40px;
 }
 
 .education-card-edit {
@@ -238,7 +202,13 @@ section {
     border: 3px solid black;
     background-color: black;
     border-radius: 20px;
-    filter: drop-shadow(0px 3px 15px #4ff3ee);
+    filter: drop-shadow(0px 3px 6px #4ff3ee);
+    transform: scale(1);
+    transition: all 200ms;
+}
+
+.education-card-edit:hover {
+    transform: scale(1.05);
 }
 
 .card-content {
@@ -262,15 +232,18 @@ section {
 .tags {
     margin: 0;
     padding: 0;
+    gap: 10px;
     display: flex;
-    justify-content: space-between;
     color: #4ff3ee;
     cursor: pointer;
 }
 
 .tags-decoration {
+    margin: 0;
     border: 2px solid white;
     text-align: center;
+    display: flex;
+    align-items: center;
     padding: 10px;
     border-radius: 50%;
     transition: all 200ms;
@@ -322,7 +295,7 @@ section {
     position: relative;
     width: 80%;
     height: 200px;
-    background-color: rgb(58, 87, 214);
+    background-color: white;
     border-radius: 10px;
     filter: drop-shadow(0px 3px 15px rgba(131, 120, 120, 0.7));
     transform: scale(1);
@@ -347,13 +320,43 @@ section {
 
 
 
+.subtitles {
+    font-family: 'Inconsolata', 'Sans-sérif';
+    letter-spacing: 5px;
+    font-size: 30px;
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+#Languages {
+    margin-top: 100px;
+}
+
+.front-end-order {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.resize {
+    height: 200px;
+}
+
+.html {
+    width: 250px;
+}
+
+
 
 
 footer
 {
     display: flex;
     justify-content: space-around;
-    margin-top: 1500px;
+    margin-top: 500px;
     padding-top: 70px;
     padding-bottom: 70px;
 }
