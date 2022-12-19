@@ -103,6 +103,9 @@ header {
     color: black;
 }
 
+.black:hover {
+    color: black;
+}
 
 .welcoming-message {
     font-family: 'Inconsolata', 'Sans-sérif';
@@ -117,6 +120,8 @@ header {
 .main-wrapper {
     max-width: 1400px;
     margin: auto;
+    padding-right: 50px;
+    padding-left: 10px;
 }
 
 section {
@@ -279,8 +284,8 @@ section {
     font-size: 18px;
 }
 
-.top {
-    top: 120px;
+.bottom {
+    bottom: 30px;
 }
 
 
@@ -293,8 +298,8 @@ section {
 
 .projects-cards {
     position: relative;
-    width: 80%;
-    height: 200px;
+    width: 90%;
+    height: 153px;
     background-color: white;
     border-radius: 10px;
     filter: drop-shadow(0px 3px 15px rgba(131, 120, 120, 0.7));
@@ -306,15 +311,13 @@ section {
     transform: scale(1.05);
 }
 
-.floating {
-    float: right;
+
+.image-projects-card {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: drop-shadow(0px 3px 6px rgba(131, 120, 120, 0.7));
 }
-
-.arrow:hover {
-    display: none;
-}
-
-
 
 
 
