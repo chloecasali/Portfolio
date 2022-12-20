@@ -40,10 +40,13 @@
 
 
             <form class="contact-form" method="post" action="results.php">
-                <label for="name">Name</label><input type="text" name="name" id="name" placeholder="John Doe" class="form-cases"> <br>
-                <label for="companyname">Company's name (if you are one)</label><input type="text" name="companyname" id="companyname" class="form-cases"> <br>
+                <div class="name-flex">
+                    <div class="name-block"><label for="firstname">First name</label><br><input type="text" name="name" id="name" placeholder="John" autofocus class="form-cases capitalize"></div>
+                    <div class="name-block"><label for="lastname">Last name</label><br><input type="text" name="name" id="name" placeholder="Doe" class="form-cases capitalize"></div>
+                </div><br>
+                <label for="companyname">Company's name (if you are one)</label><input type="text" name="companyname" id="companyname" class="form-cases capitalize"> <br>
                 <label for="email" >Email</label><input type="email" name="email" id="email" placeholder="exemple@contact.com" class="form-cases"> <br>
-                <label for="phone">Phone number</label><input type="tel" name="phone" id="phone" class="form-cases"> <br>
+                <label for="phone">Phone number</label><input type="tel" name="phone" id="phone" maxlength="10" class="form-cases"> <br>
                 <label for="knowme">How do you know me ?</label>
                 <select name="knowme" id="knowme" class="form-cases">
                     <option value="linkedin" selected>LinkedIn</option>
@@ -54,12 +57,11 @@
                     <option value="physicalevent">Physical event</option>
                     <option value="other">Other</option>
                 </select> <br>
-                <label for="otherreason">If you select "Other", tell me how here</label><input type="text" name="otherreason" id="otherreason" class="form-cases"> <br>
+                <label for="otherreason">If you select "Other", tell me how here</label><input type="text" name="otherreason" id="otherreason" class="form-cases capitalize"> <br>
 
-                <p>Thank you for contacting me, hope we will meet each other soon !</p>
-
+                <p><span class="thanks-contact-form">Thank you</span> for contacting me, hope we will meet each other soon !</p>
                 <label for="feedback" class="form-cases">Some feedback to add about my website ?</label> <br>
-                <textarea name="feedback" id="feedback" rows="10" cols="50"></textarea>
+                <textarea name="feedback" id="feedback" rows="10" cols="50" class="form-cases capitalize"></textarea>
             </form>
         </section>
 
