@@ -6,11 +6,34 @@ body {
     color: white;
     font-family: 'Josefin Sans', 'Sans-sérif';
 }
-
 ul {
     list-style-type: none;
     margin: 0;
 }
+a {
+    text-decoration: none;
+    color: white;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Josefin Sans';
+}
+section {
+    width: 100%;
+    padding: 20px;
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-wrapper {
+    max-width: 1400px;
+    margin: auto;
+    padding-right: 50px;
+    padding-left: 10px;
+}
+
 .cv-text {
     font-size: 18px;
     margin: 0;
@@ -20,22 +43,11 @@ ul {
     display: flex;
     gap: 5px ;
 }
-a {
-    text-decoration: none;
-    color: white;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Josefin Sans';
-}
 .logo {
     width: 80px;
     height: 80px;
     padding-top: 10px;
 }
-
 .navigation {
     font-size: 18px;
     margin-top: 50px;
@@ -47,11 +59,9 @@ header {
     color: white;
     transform: scale(1);
 }
-
 .navigation a {
     position: relative;
 }
-
 .navigation a::after {
     content: "";
     position: absolute;
@@ -62,25 +72,19 @@ header {
     bottom: -3px;
     transition: 200ms;
 }
-
 .navigation a:hover::after {
     width: 100%;
 }
-
 .navigation li:hover {
     transform: scale(1.10);
     transition: transform 200ms;
-
 }
-
 .contact-me {
     color: #4ff3ee;
 }
-
 .navigation .contact-me::after {
     background-color: #4ff3ee;
 }
-
 .download-cv-button {
     width: 60px;
     height: 30px;
@@ -103,10 +107,6 @@ header {
     color: black;
 }
 
-.black:hover {
-    color: black;
-}
-
 .welcoming-message {
     font-family: 'Inconsolata', 'Sans-sérif';
     display: flex;
@@ -115,29 +115,6 @@ header {
     margin-top: 300px;
     gap: 150px;
     font-size: 100px;
-}
-
-.main-wrapper {
-    max-width: 1400px;
-    margin: auto;
-    padding-right: 50px;
-    padding-left: 10px;
-}
-
-section {
-    width: 100%;
-    padding: 20px;
-    margin-top: 300px;
-    display: flex;
-    flex-direction: column;
-}
-
-#Contact-me {
-    margin-top: 200px;
-}
-
-.message-icon {
-    color: #4ff3ee;
 }
 
 .title-section {
@@ -152,7 +129,6 @@ section {
 #About {
     margin-top: 760px;
 }
-
 .div-about {
     width: 100%;
     display: flex;
@@ -160,7 +136,6 @@ section {
     justify-content: space-between;
     gap: 10px;
 } 
-
 .about-me-text {
     width: 50%;
     text-align: justify;
@@ -170,19 +145,15 @@ section {
     line-height: 25px;
     word-spacing: 2px;
 }
-
 .first-name {
     color: #4ff3ee;
 }
-
-
 .image-container {
     width: 550px;
     height: 550px;
     border: 1px solid black;
     border-radius: 50%;
 }
-
 .image {
     width: 100%;
     height: 550px;
@@ -201,8 +172,7 @@ section {
     grid-row-gap: 35px;
     grid-column-gap: 40px;
 }
-
-.education-card-edit {
+.education-card {
     width: 100%;
     border: 3px solid black;
     background-color: black;
@@ -211,29 +181,24 @@ section {
     transform: scale(1);
     transition: all 200ms;
 }
-
-.education-card-edit:hover {
+.education-card:hover {
     transform: scale(1.05);
 }
-
 .card-content {
     padding: 30px 15px 30px 15px;
 }
-
-.card-title-edit {
+.card-title {
     margin: 0;
     margin-bottom: 6px;
     padding: 0;
     color: #4ff3ee;
     font-size: 20px;
 }
-
 .card-subtitle {
     margin: 0;
     padding: 0;
     font-weight: 300;
 }
-
 .tags {
     margin: 0;
     padding: 0;
@@ -242,7 +207,6 @@ section {
     color: #4ff3ee;
     cursor: pointer;
 }
-
 .tags-decoration {
     margin: 0;
     border: 2px solid white;
@@ -253,49 +217,24 @@ section {
     border-radius: 50%;
     transition: all 200ms;
 }
-
 .tags-decoration:hover {
     background-color: white;
 }
-
 .card-description {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 .card-description p {
     margin: 0;
     padding: 0;
     margin-bottom: 6px;
 }
 
-
-
-
-
-
-.card-title {
-    position: relative;
-    width: auto;
-    bottom: 70px;
-    background-color: black;
-    border-radius: 0 0 10px 10px;
-    padding: 15px;
-    font-size: 18px;
-}
-
-.bottom {
-    bottom: 30px;
-}
-
-
-
 .div-projects {
     margin-top: 50px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
 }
-
 .projects-cards {
     position: relative;
     width: 90%;
@@ -310,8 +249,18 @@ section {
 .projects-cards:hover {
     transform: scale(1.05);
 }
-
-
+.projects-card-title {
+    position: relative;
+    width: auto;
+    bottom: 70px;
+    background-color: black;
+    border-radius: 0 0 10px 10px;
+    padding: 15px;
+    font-size: 18px;
+}
+.projects-card-title-bottom {
+    bottom: 30px;
+}
 .image-projects-card {
     width: 100%;
     object-fit: cover;
@@ -319,11 +268,7 @@ section {
     filter: drop-shadow(0px 3px 6px rgba(131, 120, 120, 0.7));
 }
 
-
-
-
-
-.subtitles {
+.rubrics-title {
     font-family: 'Inconsolata', 'Sans-sérif';
     letter-spacing: 5px;
     font-size: 30px;
@@ -332,28 +277,18 @@ section {
     margin: 0;
     margin-bottom: 50px;
 }
-
-#Languages {
-    margin-top: 100px;
-}
-
 .front-end-order {
     padding: 0;
     margin: 0;
     display: flex;
     gap: 30px;
 }
-
 .resize {
     height: 200px;
 }
-
 .html {
     width: 250px;
 }
-
-
-
 
 footer
 {
@@ -363,14 +298,11 @@ footer
     padding-top: 70px;
     padding-bottom: 70px;
 }
-
-
 .keep-in-touch-title {
     font-size: 35px;
     margin: 0;
     padding: 0;
 }
-
 .keep-in-touch-text
 {
     font-size: 16px;
@@ -378,7 +310,6 @@ footer
     padding: 0;
     padding-top: 15px;
 }
-
 .contact-footer-button {
     width: 220px;
     height: 60px;
@@ -393,19 +324,16 @@ footer
     transition: all 200ms;
     transition-delay: 0, 100ms;
 }
-
 .contact-footer-button:hover {
     transform: scale(1.05);
     background-color: white;
 }
-
 .footer-title {
     font-size: 19px;
     padding: 0;
     padding-bottom: 20px;
     margin: 0;
 }
-
 footer ul {
     padding: 0;
     font-size: 16px;
@@ -415,9 +343,14 @@ footer ul {
     gap: 15px;
 }
 
+/* contact.html */
 
-
-
+#Contact-me {
+    margin-top: 200px;
+}
+.message-icon {
+    color: #4ff3ee;
+}
 .contact-form {
     width: 50%;
     margin-top: 50px;
@@ -426,7 +359,6 @@ footer ul {
     justify-content: center;
     align-content: center;
 }
-
 .form-cases {
     gap: 100px;
 }
