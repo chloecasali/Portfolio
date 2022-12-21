@@ -30,8 +30,6 @@ section {
 .main-wrapper {
     max-width: 1400px;
     margin: auto;
-    padding-right: 50px;
-    padding-left: 10px;
 }
 
 .cv-text {
@@ -106,12 +104,29 @@ section {
     background-color: white;
     color: black;
 }
+.download-cv-button-tab {
+    display: none;
+    width: 60px;
+    height: 30px;
+    font-family: 'Josefin Sans';
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    background-color: white;
+    font-size: 18px;
+    color: black;
+    border: 1px solid black;
+    margin-top: 40px;
+}
+.download-cv-button-tab strong {
+    padding: 10px;
+}
 
 .welcoming-message {
     font-family: 'Inconsolata', 'Sans-sérif';
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
     margin-top: 300px;
     gap: 150px;
     font-size: 100px;
@@ -135,6 +150,7 @@ section {
     flex-direction: row-reverse;
     justify-content: space-between;
     gap: 10px;
+    align-items: center;
 } 
 .about-me-text {
     width: 50%;
@@ -161,16 +177,50 @@ section {
     object-fit: cover;
 }
 
-
-
+.div-projects {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.projects-cards {
+    position: relative;
+    width: 90%;
+    height: 153px;
+    background-color: white;
+    border-radius: 10px;
+    filter: drop-shadow(0px 3px 15px rgba(131, 120, 120, 0.7));
+    transform: scale(1);
+    transition: all 200ms;
+}
+.projects-cards:hover {
+    transform: scale(1.05);
+}
+.projects-card-title {
+    position: relative;
+    width: auto;
+    bottom: 70px;
+    background-color: black;
+    border-radius: 0 0 10px 10px;
+    padding: 15px;
+    font-size: 18px;
+}
+.projects-card-title-bottom {
+    bottom: 30px;
+}
+.image-projects-card {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: drop-shadow(0px 3px 6px rgba(131, 120, 120, 0.7));
+}
 
 .div-education {
     width: 100%;
     margin-top: 50px;
     display: grid;
-    grid-template-columns: 70% 30%;
-    grid-row-gap: 35px;
-    grid-column-gap: 40px;
+    grid-template-columns: 60% 30%;
+    grid-row-gap: 50px;
+    justify-content: space-between;
 }
 .education-card {
     width: 100%;
@@ -202,10 +252,15 @@ section {
 .tags {
     margin: 0;
     padding: 0;
-    gap: 10px;
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     color: #4ff3ee;
     cursor: pointer;
+}
+.gap-tags {
+    justify-content: flex-start;
+    gap: 10px;
 }
 .tags-decoration {
     margin: 0;
@@ -228,44 +283,6 @@ section {
     margin: 0;
     padding: 0;
     margin-bottom: 6px;
-}
-
-.div-projects {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-}
-.projects-cards {
-    position: relative;
-    width: 90%;
-    height: 153px;
-    background-color: white;
-    border-radius: 10px;
-    filter: drop-shadow(0px 3px 15px rgba(131, 120, 120, 0.7));
-    transform: scale(1);
-    transition: all 200ms;
-}
-
-.projects-cards:hover {
-    transform: scale(1.05);
-}
-.projects-card-title {
-    position: relative;
-    width: auto;
-    bottom: 70px;
-    background-color: black;
-    border-radius: 0 0 10px 10px;
-    padding: 15px;
-    font-size: 18px;
-}
-.projects-card-title-bottom {
-    bottom: 30px;
-}
-.image-projects-card {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    filter: drop-shadow(0px 3px 6px rgba(131, 120, 120, 0.7));
 }
 
 .rubrics-title {
@@ -366,8 +383,8 @@ input {
     width: 100%;
     font-family: 'Josefin Sans', 'Sans-sérif';
     font-weight: 700;
-    font-size: 18px;
-    padding-left: 20px;
+    font-size: 16px;
+    padding: 15px;
     border: 2px solid white;
     outline: none;
     border-radius: 10px;
@@ -386,8 +403,9 @@ select {
     height: 50px;
     width: 100%;
     font-family: 'Josefin Sans', 'Sans-sérif';
+    font-size: 16px;
     font-weight: 700;
-    padding-left: 20px;
+    padding: 15px;
     border: 2px solid white;
     border-radius: 10px;
     background-color: black;
@@ -404,8 +422,6 @@ option {
 .thanks-contact-form {
     color: #4ff3ee;
 }
-
-
 .name-flex {
     display: inline-flex;
     width: 100%;
@@ -415,4 +431,85 @@ option {
     display: block;
     width: 50%;
 }
+.feedback {
+    resize: none;
+    outline: none;
+    overflow: hidden;
+    border-radius: 10px;
+    color: white;
+    border: 2px solid white;
+    background-color: black;
+    font-family: 'Josefin Sans', 'Sans-sérif';
+    font-weight: 700;
+    font-size: 18px;
+    padding: 15px;
+}
+.feedback:focus {
+    border: 2px solid #4ff3ee;
+}
+.submit-btn {
+    width: 20%;
+    height: 50px;
+    font-family: 'Josefin Sans', 'Sans-sérif';
+    font-weight: 700;
+    font-size: 16px;
+    padding: 15px;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 10px;
+    background-color: black;
+    text-align: center;
+    color: #4ff3ee;
+    cursor: pointer;
+    outline: none;
+    margin-top: 30px;
+    transform: scale(1);
+    transition: all 200ms;
+    transition-delay: 0, 100ms;
+}
+.submit-btn:hover {
+    transform: scale(1.05);
+    background-color: white;
+}
 
+/*media querries*/
+
+/* Tablette : 992px*/
+
+@media screen and (max-width: 992px) {
+    body {
+        max-width: 992px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    section {
+        margin-top: 0px;
+    }
+
+    .cv-text {
+        display: none;
+    }
+    .download-cv-button-tab {
+        display: flex;
+    }
+
+    .welcoming-message {
+        font-size: 70px;
+    }
+
+    #About {
+        margin-top: 500px;
+    }
+    .image-container {
+        width: 400px;
+        height: 400px;
+    }
+    .image {
+        height: 400px;
+    }
+    
+
+    .projects-card-title-bottom {
+        bottom: 10px;
+    }
+}
