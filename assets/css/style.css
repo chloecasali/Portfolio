@@ -47,6 +47,8 @@ section {
 .navigation {
     display: flex;
     align-content: center;
+    position: relative;
+    left: 55px;
     font-size: 18px;
     margin-top: 50px;
     gap: 50px;
