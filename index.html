@@ -15,7 +15,7 @@
     </head>
 
     <body>
-        <header>
+        <header class="desktop-header">
             <img class="logo" src="assets/images/logo_temporaire_portfolio.png" alt="logo-portfolio">
             <nav>
                 <ul class="navigation">
@@ -25,10 +25,32 @@
                     <li><a href="#Education">Education</a></li>
                 </ul>
             </nav>
+            <p class="cv-text">
+                To check my <strong>CV,</strong> click
+                <a href="CV_Casali_Chloé_ISCOD.pdf">
+                    <button type="submit" class="download-cv-button">here</button>
+                </a>
+            </p>
+        </header>
 
-            <p class="cv-text">To check my <strong>CV,</strong> click
-            <a href="CV_Casali_Chloé_ISCOD.pdf"><button type="submit" class="download-cv-button">here</button></a>
-            <a href="CV_Casali_Chloé_ISCOD.pdf"><button type="submit" class="download-cv-button-tab"><strong>CV</strong></button></a></p>
+        <header class="tab-header">
+            <img class="logo" src="assets/images/logo_temporaire_portfolio.png" alt="logo-portfolio">
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#Education">Education</a></li>
+                </ul>
+            </nav>
+            <a href="CV_Casali_Chloé_ISCOD.pdf">
+                <button type="submit" class="download-cv-button-tab"><i class="fa-regular fa-file"></i></button>
+            </a>
+        </header>
+
+        <header class="mobile-header">
+                <img class="logo" src="assets/images/logo_temporaire_portfolio.png" alt="logo-portfolio">
+                <button type="menu" class="mobile-menu"><i class="fa-solid fa-bars fa-3x menu-icon"></i></button>
         </header>
 
 
@@ -37,7 +59,10 @@
         <main class="main-wrapper">
 
             <section id="About">
-                <h2 class="title-section">About me</h2>
+                <div class="title">
+                    <h2 class="title-section">About me</h2>
+                    <img class="image-tab" src="assets/images/profile_linkedin.png" alt="picture"/>
+                </div>
                 <div class="div-about">
                     <div class="image-container">
                         <img class="image" src="assets/images/profile_linkedin.png" alt="picture"/>
@@ -53,9 +78,9 @@
                         at the ISCOD school for two year. <br>
                         In the future, I will also follow a course in UI/UX Design because 
                         I'm very interested by that and I would like to learn more of that and 
-                        also to qualify myself as a full-stack web developer and UI/UX designer. <br><br>
+                        also to qualify myself as a full-stack web developer and UI/UX designer. <span class="more-">more...</span><br><br>
 
-                        I started be interested in web development when I was very young, thanks to my brother who had created a forum.
+                        <p class="more">I started be interested in web development when I was very young, thanks to my brother who had created a forum.
                         I remember being very interested in the interface, the layout of the different sections, the modification of our profile and the publication of posts. 
                         So I wanted to create too, a forum on animals which was never finished and which I completely gave up.
                         
@@ -63,7 +88,7 @@
                         It was in 12th grade that I completely changed paths, moving from journalism to web development, which suited me better.
 
                         So I did everything to start this retraining as soon as possible, and here I am, creating my port-folio from A to Z and
-                        looking for an apprenticeship in web development.
+                        looking for an apprenticeship in web development.</p>
                     </div>
                 </div>
             </section>
@@ -141,8 +166,8 @@
         </div>
 
         <div>
-            <h4 class="footer-title"><strong>Navigation</strong></h4>
-                <ul>
+            <h4 class="footer-title navigation-footer-title"><strong>Navigation</strong></h4>
+                <ul class="navigation-footer">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#About">About</a></li>
                     <li><a href="#Projects">Projects</a></li>

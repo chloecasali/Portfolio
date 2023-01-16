@@ -9,15 +9,16 @@ body {
 ul {
     list-style-type: none;
     margin: 0;
+    padding: 0;
 }
 a {
     text-decoration: none;
     color: white;
+    padding: 0;
 }
 header {
     display: flex;
     justify-content: space-between;
-    font-family: 'Josefin Sans';
 }
 section {
     display: flex;
@@ -32,12 +33,9 @@ section {
     margin: auto;
 }
 
-.cv-text {
+/* header desktop */
+.desktop-header {
     display: flex;
-    align-items: center;
-    font-size: 18px;
-    margin: 38px 0 0 0;
-    gap: 5px;
 }
 .logo {
     width: 80px;
@@ -45,10 +43,10 @@ section {
     margin-top: 10px;
 }
 .navigation {
-    display: flex;
-    align-content: center;
     position: relative;
     left: 55px;
+    display: flex;
+    align-content: center;
     font-size: 18px;
     margin-top: 50px;
     gap: 50px;
@@ -74,7 +72,6 @@ section {
     transform: scale(1.15);
     transition: transform 200ms;
 }
-
 .download-cv-button {
     width: 60px;
     height: 30px;
@@ -94,19 +91,43 @@ section {
     background-color: white;
     color: black;
 }
+.cv-text {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin: 38px 0 0 0;
+    gap: 5px;
+}
+
+/* header tab */
+.tab-header {
+    display: none;
+}
 .download-cv-button-tab {
     display: none;
-    width: 60px;
-    height: 30px;
-    font-family: 'Josefin Sans';
-    text-align: center;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
     background-color: white;
-    font-size: 18px;
-    color: black;
-    border: 1px solid black;
+    border: 1px solid white;
+    color: #4ff3ee;
+    border-radius: 5px;
+    margin-top: 25px;
 }
-.download-cv-button-tab strong {
-    padding: 10px;
+
+/* header mobile */
+.mobile-header {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+.mobile-menu {
+    display: none;
+    height: 35px;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
 }
 
 .welcoming-message {
@@ -125,10 +146,15 @@ section {
     font-size: 45px;
     font-weight: 100;
     margin: 0 0 50px 0;
+    padding: 0;
+    align-items: center;
 }
 
 #About {
     margin-top: 520px;
+}
+.image-tab {
+    display: none;
 }
 .div-about {
     width: 100%;
@@ -147,6 +173,9 @@ section {
 }
 .first-name {
     color: #4ff3ee;
+}
+.more-btn {
+    display: none;
 }
 .image-container {
     width: 530px;
@@ -176,6 +205,7 @@ section {
     transform: scale(1.05);
 }
 .card img {
+    object-fit: cover;
     width: 100%;
     height: 220px;
     border-radius: 10px 10px 0 0;
@@ -276,43 +306,186 @@ footer ul {
     gap: 15px;
 }
 
-/*media querries*/
-/* Tablette : 992px*/
-
+/*Tablette*/
 @media screen and (max-width: 992px) {
-    body {
-        max-width: 992px;
-        padding-left: 15px;
-        padding-right: 15px;
+    .desktop-header {
+        display: none;
     }
-    section {
-        margin-top: 0px;
-    }
-
     .cv-text {
         display: none;
+    }
+    .download-cv-button {
+        display: none;
+    }
+    .navigation {
+        position: none;
+        left: 0;
+    }
+    .navigation a {
+        position: none;
+    }
+    .navigation a::after {
+        content: "";
+        position: none;
+        background-color: none;
+        height: 0;
+        bottom: 0;
+        transition: none;
+    }
+    .navigation a:hover::after {
+        width: 100%;
+    }
+    .navigation li:hover {
+        transform: none;
+        transition: none;
+    }
+    .tab-header {
+        display: flex;
     }
     .download-cv-button-tab {
         display: flex;
     }
+    .mobile-header {
+        display: none;
+    }
+    .mobile-menu {
+        display: none;
+    }
 
     .welcoming-message {
-        font-size: 70px;
+        font-size: 60px;
     }
 
-    #About {
-        margin-top: 500px;
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    .image-tab {
+        display: flex;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        float: right;
     }
     .image-container {
-        width: 400px;
-        height: 400px;
+        display: none;
     }
-    .image {
-        height: 400px;
+    .about-me-text {
+        width: 100%;
     }
     
+    .card-title {
+        font-size: 20px;
+    }
+    h4 span {
+        display: none;
+    }
 
-    .projects-card-title-bottom {
-        bottom: 10px;
+    .div-education {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/*Mobile*/
+@media screen and (max-width: 768px) {
+    .mobile-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: black;
+        z-index: 1;
+    }
+    .navigation {
+        display: none;
+    }
+    .download-cv-button-tab {
+        display: none;
+    }
+    .menu-nav {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .logo {
+        display: flex;
+    }
+    .tab-header {
+        display: none;
+    }
+    .mobile-header {
+        display: flex;
+    }
+    .mobile-menu {
+        display: flex;
+        align-items: center;
+        background-color: black;
+    }
+    .menu-icon {
+        color: white;
+    }
+
+    .welcoming-message {
+        font-size: 40px;
+        gap: 20px;
+    }
+
+    .title-section {
+        margin: 0;
+        padding: 0;
+        font-size: 30px;
+    }
+    .more-btn {
+        display: flex;
+        color: #9C9C9C;
+    }
+    .more {
+        visibility: hidden;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+    .div-projects {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .div-education {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .resize {
+        height: 70px;
+    }
+    .html {
+        width: 90px;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        gap: 30px;
+    }
+    footer ul {
+        gap: 30px;
+    }
+    .footer-title {
+        font-size: 20px;
+    }
+    .navigation-footer {
+        display: none;
+    }
+    .navigation-footer-title {
+        display: none;
+    }
+    .contact-footer-button {
+        width: 100%;
+        background-color: white;
     }
 }
