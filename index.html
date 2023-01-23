@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="assets/css/style.css">
+        <script src="script.js" defer></script>
         <script src="https://kit.fontawesome.com/46f2335669.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,8 +50,21 @@
         </header>
 
         <header class="mobile-header">
-                <img class="logo" src="assets/images/logo_temporaire_portfolio.png" alt="logo-portfolio">
-                <button type="menu" class="mobile-menu"><i class="fa-solid fa-bars fa-3x menu-icon"></i></button>
+            <img class="logo" src="assets/images/logo_temporaire_portfolio.png" alt="logo-portfolio">
+                <input type="checkbox" id="active">
+                <label for="active" class="menu-btn"><span></span></label>
+                <label for="active" class="close"></label>
+                <div class="sidenav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#About">About</a></li>
+                        <li><a href="#Projects">Projects</a></li>
+                        <li><a href="#Education">Education</a></li>
+                    </ul>
+                    <a href="CV_Casali_Chloé_ISCOD.pdf">
+                        <button type="submit" class="download-cv-button-mobile">CV</button>
+                    </a>
+                </div>
         </header>
 
 
