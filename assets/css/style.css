@@ -245,15 +245,19 @@ section {
     font-weight: 100;
     margin: 0 0 50px 0;
 }
-.front-end-order {
+.tech-order {
+    width: 100%;
+}
+.tech-order ul {
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
+    color: #4ff3ee;
+    font-size: 18px;
+    font-weight: 600;
 }
-.resize {
-    height: 200px;
-}
-.html {
-    width: 250px;
+.tech {
+    border: 1px solid white;
+    padding: 10px;
 }
 
 footer
