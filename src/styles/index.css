@@ -1,0 +1,47 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.snap-y {
+  scroll-snap-type: y mandatory;
+}
+
+.snap-start {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.smooth-scroll-container {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+}
+
+body {
+  overflow: hidden;
+}
+
+section {
+  min-height: 100vh;
+  min-height: 100dvh;
+}

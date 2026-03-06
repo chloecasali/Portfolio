@@ -1,0 +1,12 @@
+node_modules
+dist
+.git
+.gitignore
+.idea
+*.log
+*.md:Zone.Identifier
+*.html:Zone.Identifier
+*.json:Zone.Identifier
+*.mjs:Zone.Identifier
+*.ts:Zone.Identifier
+*.tsx:Zone.Identifier
