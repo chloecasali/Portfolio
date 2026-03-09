@@ -1,4 +1,3 @@
-import { Languages } from "lucide-react";
 import { motion } from "motion/react";
 import type { Language, Theme } from "../../content/siteContent";
 import { LanguageToggle, ThemeModeButton } from "../molecules";
@@ -26,7 +25,6 @@ export function AppControls({ language, labels, onLanguageChange, onToggleTheme,
       transition={{ delay: 0.9, duration: 0.6 }}
     >
       <div className="flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-2 py-1 dark:border-white/10 dark:bg-white/5">
-        <Languages className="h-4 w-4 text-[#FA00C4]" />
         <LanguageToggle
           currentLanguage={language}
           englishLabel={labels.english}

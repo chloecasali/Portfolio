@@ -1,6 +1,6 @@
 import type { SiteContent } from "../../../content/siteContent";
 import { AmbientOrb, SectionTitle } from "../../atoms";
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import type { SceneScrollProps } from "./types";
@@ -28,16 +28,21 @@ export function ProjectsScene({ content, scrollContainerRef, ui }: ProjectsScene
                 <motion.div className={`relative overflow-hidden rounded-3xl ${index % 2 === 0 ? "lg:order-1" : "lg:order-2"}`} whileHover={{ scale: 1.02 }} transition={{ duration: 0.4 }}>
                   <div className="relative aspect-[16/10]">
                     <img src={project.image} alt={project.title} className="h-full w-full object-cover" />
-                    <motion.div className="absolute inset-0 flex items-end justify-center gap-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent pb-8 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                      <motion.button className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-white transition-all duration-300 hover:border-[#FA00C4] hover:bg-[#FA00C4]" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                        <ExternalLink className="h-4 w-4" />
-                        <span>{ui.viewLive}</span>
-                      </motion.button>
-                      <motion.button className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-white transition-all duration-300 hover:border-[#FA00C4] hover:bg-[#FA00C4]" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                        <Github className="h-4 w-4" />
-                        <span>{ui.code}</span>
-                      </motion.button>
-                    </motion.div>
+                    {project.codeUrl ? (
+                      <motion.div className="absolute inset-0 flex items-end justify-center gap-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent pb-8 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                        <motion.a
+                          href={project.codeUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-white transition-all duration-300 hover:border-[#FA00C4] hover:bg-[#FA00C4]"
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          <Github className="h-4 w-4" />
+                          <span>{ui.code}</span>
+                        </motion.a>
+                      </motion.div>
+                    ) : null}
                   </div>
                 </motion.div>
                 <div className={index % 2 === 0 ? "lg:order-2" : "lg:order-1"}>

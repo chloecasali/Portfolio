@@ -1,11 +1,11 @@
 import type { SiteContent } from "../../../content/siteContent";
 import { AmbientOrb, SectionTitle } from "../../atoms";
-import { Code2, Container, Database, Layout, Palette, Server } from "lucide-react";
+import { Code2, Container, Database, Layout, Palette, Monitor } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import type { SceneScrollProps } from "./types";
 
-const skillIcons = [Code2, Server, Database, Container, Layout, Palette];
+const skillIcons = [Code2, Monitor, Database, Container, Layout, Palette];
 
 interface ExpertiseSceneProps extends SceneScrollProps {
   content: SiteContent["expertise"];

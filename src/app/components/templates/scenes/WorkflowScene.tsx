@@ -1,11 +1,11 @@
 import type { SiteContent } from "../../../content/siteContent";
 import { AmbientOrb, SectionTitle } from "../../atoms";
-import { Code, GitBranch, Rocket, TestTube } from "lucide-react";
+import { Search, Blocks, GitBranch, TestTube, Rocket, LineChart } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import type { SceneScrollProps } from "./types";
 
-const workflowIcons = [GitBranch, Code, TestTube, Rocket];
+const workflowIcons = [Search, Blocks, GitBranch, TestTube, Rocket, LineChart];
 
 interface WorkflowSceneProps extends SceneScrollProps {
   content: SiteContent["workflow"];

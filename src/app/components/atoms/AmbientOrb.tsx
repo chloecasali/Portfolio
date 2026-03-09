@@ -1,8 +1,10 @@
 import type { ComponentProps } from "react";
 import { motion } from "motion/react";
 
-interface AmbientOrbProps
-  extends Pick<ComponentProps<typeof motion.div>, "animate" | "className" | "style" | "transition"> {}
+type AmbientOrbProps = Pick<
+  ComponentProps<typeof motion.div>,
+  "animate" | "className" | "style" | "transition"
+>;
 
 export function AmbientOrb({ animate, className, style, transition }: AmbientOrbProps) {
   return (

@@ -7,12 +7,14 @@ export function CustomCursor() {
 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-  const blurX = useSpring(mouseX, { stiffness: 250, damping: 28, mass: 0.55 });
-  const blurY = useSpring(mouseY, { stiffness: 250, damping: 28, mass: 0.55 });
+  const blurX = useSpring(mouseX, { stiffness: 360, damping: 30, mass: 0.36 });
+  const blurY = useSpring(mouseY, { stiffness: 360, damping: 30, mass: 0.36 });
+  const coreX = useSpring(mouseX, { stiffness: 760, damping: 34, mass: 0.18 });
+  const coreY = useSpring(mouseY, { stiffness: 760, damping: 34, mass: 0.18 });
   const blurRenderX = useTransform(blurX, (value) => value - 24);
   const blurRenderY = useTransform(blurY, (value) => value - 24);
-  const coreRenderX = useTransform(blurX, (value) => value - 8);
-  const coreRenderY = useTransform(blurY, (value) => value - 8);
+  const coreRenderX = useTransform(coreX, (value) => value - 8);
+  const coreRenderY = useTransform(coreY, (value) => value - 8);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {

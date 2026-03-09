@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useMemo, useState } from "react";
-import { siteContent, type Language, type Theme } from "../content/siteContent";
+import type { Language, Theme } from "../content/siteContent";
+import i18n, { getPreferredLanguage, getSiteContent } from "../i18n";
 
 function getInitialTheme(): Theme {
   const savedTheme = localStorage.getItem("theme") as Theme | null;
@@ -10,18 +11,9 @@ function getInitialTheme(): Theme {
   return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
 
-function getInitialLanguage(): Language {
-  const savedLanguage = localStorage.getItem("language") as Language | null;
-  if (savedLanguage === "en" || savedLanguage === "fr") {
-    return savedLanguage;
-  }
-
-  return navigator.language.toLowerCase().startsWith("fr") ? "fr" : "en";
-}
-
 export function usePortfolioPreferences() {
   const [theme, setTheme] = useState<Theme>(getInitialTheme);
-  const [language, setLanguage] = useState<Language>(getInitialLanguage);
+  const [language, setLanguage] = useState<Language>(getPreferredLanguage);
 
   useLayoutEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
@@ -34,9 +26,11 @@ export function usePortfolioPreferences() {
 
   useEffect(() => {
     localStorage.setItem("language", language);
+    document.documentElement.lang = language;
+    void i18n.changeLanguage(language);
   }, [language]);
 
-  const content = useMemo(() => siteContent[language], [language]);
+  const content = useMemo(() => getSiteContent(language), [language]);
 
   const toggleTheme = () => {
     setTheme((currentTheme) => (currentTheme === "dark" ? "light" : "dark"));

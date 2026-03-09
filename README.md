@@ -1,7 +1,7 @@
 # Chloe Portfolio
 
 Interactive personal portfolio built with React, Vite, Motion, and Tailwind CSS.
-The application is a one-page, scene-based experience with guided scrolling, bilingual content (`EN` / `FR`), light and dark themes, a custom cursor, and Docker-based development/production workflows.
+The application is a one-page, scene-based experience with guided scrolling, bilingual content (`EN` / `FR`), `react-i18next` localization, light and dark themes, a custom cursor, and Docker-based development/production workflows.
 
 The original visual direction comes from the Figma file:
 https://www.figma.com/design/JqObwkkWS8BL2Ls1aPJg8y/Interactive-Personal-Portfolio-Website
@@ -93,6 +93,14 @@ npm run dev
 
 Open `http://localhost:5173`.
 
+### Linting
+
+```bash
+make lint
+```
+
+`make lint` runs inside the Docker dev service, so it does not depend on a working local `node_modules` directory.
+
 ### Docker development
 
 ```bash
@@ -117,19 +125,34 @@ make run       # docker compose up -d portfolio-dev
 make ps        # docker compose ps
 make logs      # docker compose logs -f portfolio-dev
 make stop      # docker compose down
+make lint      # eslint
 ```
 
 Note: `make stop` shuts down the full Compose project.
 
 ## Content and Localization
 
-All user-facing copy used by the active portfolio experience lives in:
+All user-facing copy used by the active portfolio experience lives in separate locale files:
 
 ```text
-src/app/content/siteContent.ts
+src/app/i18n/locales/en.ts
+src/app/i18n/locales/fr.ts
 ```
 
-This file contains the English and French versions of the scene content, labels, and UI text.
+Shared translation types live in `src/app/content/siteContent.ts`, and i18n initialization lives in `src/app/i18n/index.ts`.
+
+## Contact Form
+
+The contact form submits through Formspree. Configure it locally or in CI with:
+
+```bash
+VITE_FORMSPREE_ENDPOINT=https://formspree.io/f/your-form-id
+```
+
+For local development, copy `.env.example` to `.env` and set the real Formspree endpoint there.
+For the deployed GitHub Pages site, add `VITE_FORMSPREE_ENDPOINT` as a repository variable so the workflow can inject it at build time.
+
+The destination Gmail address is configured in Formspree, not stored in this repository.
 
 ## Validation
 
