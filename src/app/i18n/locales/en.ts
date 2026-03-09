@@ -1,19 +1,20 @@
+import apiProjectImage from "../../img.png";
 import type { SiteContent } from "../../content/siteContent";
 
 const en = {
-  loaderName: "Chloe",
+  loaderName: "Chloé",
   hero: {
-    name: "Chloe",
+    name: "Chloé",
     role: "Full-Stack Developer",
-    stack: ["Symfony 7", "API Platform", "React.js", "TypeScript"],
+    stack: ["Symfony 7", "API Platform", "React.JS", "TypeScript"],
   },
   introduction: {
     title: "Introduction",
     paragraphs: [
-      "I am a full-stack developer who designs robust and maintainable web applications. I approach each project from a real need, then shape a solution and build it in a structured way.",
-      "Throughout my experience, I have worked on both backend and frontend development, which gives me a global view of a project. I have also handled some automation and development-environment concerns, especially with Docker and continuous integration.",
-      "I have also had the opportunity to work on UI/UX in some projects. It is an area that interests me and enriches the way I design interfaces, even though my main goal is to grow as a developer. That perspective helps me create products that are more coherent, more readable, and more thoughtfully designed as a whole.",
-      "Through this portfolio, I am sharing part of my background, the way I work, and several projects that reflect my approach to web development.",
+      "I am a full-stack developer, and I design robust, maintainable web applications. I approach each project by starting from a need, imagining a solution, and then developing it in a structured way.",
+      "Throughout my journey, I have worked on both backend and frontend development, which now gives me a global view of a project. I have also explored aspects related to automation and development environments, notably with Docker and continuous integration.",
+      "I have also had the opportunity to work on UI/UX in some projects. It is an area that interests me and enriches the way I design interfaces, even though I primarily want to grow as a developer. This sensitivity mainly helps me create products that are more coherent, more readable, and more thoughtfully designed as a whole.",
+      "Through this portfolio, I share part of my journey, the way I work, and several projects that reflect my approach to web development.",
     ],
   },
   expertise: {
@@ -21,14 +22,20 @@ const en = {
     items: [
       {
         title: "Backend Architecture",
-        techs: ["Symfony", "API Platform", "REST APIs", "Doctrine ORM", "Authentication / Security", "JWT"],
+        techs: ["Symfony", "API Platform", "REST API", "Doctrine ORM", "Authentication / Security", "JWT"],
       },
-      { title: "Frontend Development", techs: ["React", "TypeScript", "Next.js", "Tailwind CSS", "HTML", "CSS"] },
+      {
+        title: "Frontend Development",
+        techs: ["React", "TypeScript", "Next.js", "Tailwind CSS", "HTML", "CSS"],
+      },
       {
         title: "Database Design",
         techs: ["PostgreSQL", "MySQL", "Query Optimization", "Data Modeling"],
       },
-      { title: "DevOps & Deployment", techs: ["Docker", "CI/CD", "GitLab", "GitHub Actions"] },
+      {
+        title: "DevOps & Deployment",
+        techs: ["Docker", "CI/CD", "GitLab", "GitHub Action"],
+      },
       {
         title: "Collaboration & Project Management",
         techs: ["Agile Methodology", "Scrum", "User Stories", "Ticket Tracking", "Milestones"],
@@ -43,28 +50,28 @@ const en = {
     title: "Workflow",
     items: [
       {
-        title: "Needs Discovery",
-        description: "Each project starts with understanding the need and defining the right solution.",
+        title: "Understanding the Need",
+        description: "Every project starts with analyzing the need and defining a suitable solution.",
       },
       {
         title: "Clean Architecture",
-        description: "Applications are designed with a clear architecture to ensure readability and maintainability.",
+        description: "Applications are designed with a clear architecture to guarantee readability and maintainability.",
       },
       {
         title: "Iterative Development",
-        description: "Development moves in short iterations with clear priorities and regular feedback.",
+        description: "Development is carried out in short iterations with clear priorities and regular feedback.",
       },
       {
         title: "Testing and Reliability",
-        description: "Tests protect critical behaviors and help limit regressions.",
+        description: "Tests secure critical behaviors and help limit regressions.",
       },
       {
         title: "Automation and Deployment",
-        description: "Builds and deployments are automated through Docker-based environments and CI/CD.",
+        description: "Builds and deployments are automated through Docker containers and CI/CD.",
       },
       {
         title: "Monitoring and Observability",
-        description: "Applications are monitored with Prometheus and Grafana to track performance and detect issues.",
+        description: "Applications are monitored with Prometheus and Grafana to track performance and detect anomalies.",
       },
     ],
   },
@@ -72,28 +79,21 @@ const en = {
     title: "Development Projects",
     items: [
       {
-        title: "E-Commerce Platform",
+        title: "SkinTrack - Mobile app for tracking skincare routines",
         description:
-          "A full-stack marketplace with a Symfony backend, React frontend, and PostgreSQL core. It combines real-time inventory, secure payments, and a polished administration flow.",
+          "SkinTrack is a mobile application for tracking skincare and wellness routines. It is built with React Native (Expo), using a clear architecture and a design system based on NativeWind.",
         image:
-          "https://images.unsplash.com/photo-1592773307163-962d25055c3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzcxODkwMDYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-        tags: ["Symfony", "React", "PostgreSQL", "Docker"],
+          "https://images.unsplash.com/photo-1741896136113-c33a4fded0b5?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+        codeUrl: "https://github.com/chloecasali/SkinTrack",
+        tags: ["React Native", "Expo", "TypeScript", "NativeWind"],
       },
       {
-        title: "Task Management System",
+        title: "Secure authentication and user management API",
         description:
-          "A collaborative workspace with live updates, advanced reporting, and team coordination tools designed around a service-oriented backend.",
-        image:
-          "https://images.unsplash.com/photo-1759884247173-3db27f7fafef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXZlbG9wbWVudCUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NzE5MTMyODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-        tags: ["API Platform", "TypeScript", "Redis", "Kubernetes"],
-      },
-      {
-        title: "Analytics Dashboard",
-        description:
-          "A data-heavy interface with interactive visualization, custom reporting, and streaming insights designed to stay fluid at scale.",
-        image:
-          "https://images.unsplash.com/photo-1762279388957-c6ed514d3353?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjBkYXRhfGVufDF8fHx8MTc3MTk0MjI5OXww&ixlib=rb-4.1.0&q=80&w=1080",
-        tags: ["React", "D3.js", "GraphQL", "PostgreSQL"],
+          "An API dedicated to authentication and user management for SkinTrack. It secures access to resources through authentication mechanisms (JWT) and structured account management.",
+        image: apiProjectImage,
+        codeUrl: "https://github.com/chloecasali/auth",
+        tags: ["Symfony", "API Platform", "JWT Authentication", "PostgreSQL"],
       },
     ],
   },
@@ -101,53 +101,53 @@ const en = {
     title: "Design",
     items: [
       {
-        title: "Mobile Banking App",
+        title: "Mobile banking app",
         category: "UI/UX Design",
         image:
           "https://images.unsplash.com/photo-1605108222700-0d605d9ebafe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzcxOTA2ODIxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       },
       {
-        title: "SaaS Dashboard",
-        category: "Product Design",
+        title: "SaaS dashboard",
+        category: "Product design",
         image:
           "https://images.unsplash.com/photo-1629494893504-d41e26a02631?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1aSUyMGRlc2lnbiUyMG1vY2t1cHxlbnwxfHx8fDE3NzE5MjcwNjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       },
       {
-        title: "Responsive Website",
-        category: "Web Design",
+        title: "Responsive website",
+        category: "Web design",
         image:
           "https://images.unsplash.com/photo-1688733720228-4f7a18681c4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXNwb25zaXZlJTIwd2ViJTIwZGVzaWdufGVufDF8fHx8MTc3MTkyMjE1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
       },
       {
-        title: "Design System",
-        category: "Component Library",
+        title: "Design system",
+        category: "Component library",
         image:
           "https://images.unsplash.com/photo-1633198362880-4864a5d6fa30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwY29kaW5nJTIwc2V0dXB8ZW58MXx8fHwxNzcxOTQyMjk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       },
     ],
   },
   contact: {
-    title: "Let's keep in touch",
-    description: "Have a project in mind? Let's create something strong, clear, and memorable together.",
-    nameLabel: "Your Name",
-    emailLabel: "Email Address",
+    title: "Let's stay in touch",
+    description: "Do you have a project in mind? Let's build it together.",
+    nameLabel: "Your name",
+    emailLabel: "Email address",
     companyLabel: "Company (optional)",
-    messageLabel: "Your Message",
+    messageLabel: "Your message",
     subjectLabel: "Topic",
     opportunityOptionLabel: "Discuss an opportunity",
     feedbackOptionLabel: "Feedback / issue report",
     otherOptionLabel: "Other",
-    feedbackMessagePlaceholder: "Detail your suggestion or issue report",
+    feedbackMessagePlaceholder: "Describe your suggestion or issue report",
     otherMessagePlaceholder: "Describe your request",
     namePlaceholder: "John Doe",
     emailPlaceholder: "hello@example.com",
-    companyPlaceholder: "Example Inc",
+    companyPlaceholder: "Example Inc.",
     messagePlaceholder: "Tell me about your project...",
     nameRequired: "Name is required",
-    emailRequired: "Email is required",
+    emailRequired: "Email address is required",
     emailInvalid: "Invalid email address",
     messageRequired: "Message is required",
-    success: "Message sent successfully. I'll get back to you soon.",
+    success: "Message sent successfully. I'll get back to you shortly.",
     unavailable: "The contact form is not configured yet.",
     error: "Unable to send your message right now. Please try again shortly.",
   },
@@ -163,12 +163,12 @@ const en = {
     theme: "Theme",
     light: "Light",
     dark: "Dark",
-    viewLive: "View Live",
+    viewLive: "View site",
     code: "Code",
-    viewProject: "View Project",
-    send: "Send Message",
+    viewProject: "View project",
+    send: "Send message",
     sending: "Sending...",
-    backToTop: "Back to Top",
+    backToTop: "Back to top",
   },
 } satisfies SiteContent;
 

@@ -15,6 +15,7 @@ export function WorkflowScene({ content, scrollContainerRef }: WorkflowSceneProp
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ container: scrollContainerRef, target: sectionRef, offset: ["start end", "end start"] });
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+  const contentKey = `${content.title}-${content.items.map((item) => item.title).join("|")}`;
 
   const listVariants = { hidden: {}, show: { transition: { staggerChildren: 0.22, delayChildren: 0.18 } } };
   const itemVariants = { hidden: { opacity: 0, y: 34 }, show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } } };
@@ -29,7 +30,14 @@ export function WorkflowScene({ content, scrollContainerRef }: WorkflowSceneProp
         <SectionTitle className="mb-20">{content.title}</SectionTitle>
         <div className="relative">
           <motion.div className="absolute bottom-0 left-8 top-0 hidden w-px bg-gradient-to-b from-transparent via-[#FA00C4]/30 to-transparent md:block" initial={{ scaleY: 0 }} whileInView={{ scaleY: 1 }} transition={{ duration: 1, delay: 0.3 }} viewport={{ once: true }} />
-          <motion.div className="space-y-12" variants={listVariants} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }}>
+          <motion.div
+            key={contentKey}
+            className="space-y-12"
+            variants={listVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             {content.items.map((step, index) => {
               const Icon = workflowIcons[index];
               return (
