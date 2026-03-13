@@ -1,4 +1,5 @@
-import apiProjectImage from "../../img.png";
+import authProjectImage from "../../../images/auth.webp";
+import skinTrackProjectImage from "../../../images/skincare-products.webp";
 import type {SiteContent} from "../../content/siteContent";
 
 const fr = {
@@ -46,8 +47,7 @@ const fr = {
                 title: "SkinTrack — Application mobile de suivi de routines de soin",
                 description:
                     "SkinTrack est une application mobile de suivi des routines de soin et de bien-être. Elle est développée en React Native (Expo) avec une architecture claire et un design system basé sur NativeWind.",
-                image:
-                    "https://images.unsplash.com/photo-1741896136113-c33a4fded0b5?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
+                image: skinTrackProjectImage,
                 codeUrl: "https://github.com/chloecasali/SkinTrack",
                 tags: ["React Native", "Expo", "TypeScript", "NativeWind"],
             },
@@ -55,39 +55,9 @@ const fr = {
                 title: "API d’authentification et gestion des utilisateurs sécurisée",
                 description:
                     "API dédiée à l’authentification et à la gestion des utilisateurs de SkinTrack. Elle permet de sécuriser l’accès aux ressources grâce à des mécanismes d’authentification (JWT) et une gestion structurée des comptes.",
-                image:
-                    apiProjectImage,
+                image: authProjectImage,
                 codeUrl: "https://github.com/chloecasali/auth",
                 tags: ["Symfony", "API Platform", "JWT Authentication", "PostgreSQL"],
-            },
-        ],
-    },
-    design: {
-        title: "Design",
-        items: [
-            {
-                title: "Application bancaire mobile",
-                category: "Design UI/UX",
-                image:
-                    "https://images.unsplash.com/photo-1605108222700-0d605d9ebafe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzcxOTA2ODIxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-            },
-            {
-                title: "Dashboard SaaS",
-                category: "Product design",
-                image:
-                    "https://images.unsplash.com/photo-1629494893504-d41e26a02631?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1aSUyMGRlc2lnbiUyMG1vY2t1cHxlbnwxfHx8fDE3NzE5MjcwNjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-            },
-            {
-                title: "Site responsive",
-                category: "Web design",
-                image:
-                    "https://images.unsplash.com/photo-1688733720228-4f7a18681c4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXNwb25zaXZlJTIwd2ViJTIwZGVzaWdufGVufDF8fHx8MTc3MTkyMjE1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-            },
-            {
-                title: "Design system",
-                category: "Bibliothèque de composants",
-                image:
-                    "https://images.unsplash.com/photo-1633198362880-4864a5d6fa30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwY29kaW5nJTIwc2V0dXB8ZW58MXx8fHwxNzcxOTQyMjk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
             },
         ],
     },

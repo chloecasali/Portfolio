@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+// Enables the custom cursor only on devices with a fine pointer and hides the native cursor.
 export function useDesktopCursor() {
   const [showCustomCursor, setShowCustomCursor] = useState(false);
 

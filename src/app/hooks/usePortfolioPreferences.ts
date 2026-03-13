@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import type { Language, Theme } from "../content/siteContent";
 import i18n, { getPreferredLanguage, getSiteContent } from "../i18n";
 
+// Resolves the initial theme from local storage, falling back to the system preference.
 function getInitialTheme(): Theme {
   const savedTheme = localStorage.getItem("theme") as Theme | null;
   if (savedTheme === "light" || savedTheme === "dark") {
@@ -11,6 +12,7 @@ function getInitialTheme(): Theme {
   return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
 
+// Keeps theme, language, and localized content in sync with document state and local storage.
 export function usePortfolioPreferences() {
   const [theme, setTheme] = useState<Theme>(getInitialTheme);
   const [language, setLanguage] = useState<Language>(getPreferredLanguage);

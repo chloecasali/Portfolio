@@ -4,7 +4,6 @@ import { AppControls, CustomCursor, LoadingScreen, ParallaxBackground } from "..
 import { Toaster } from "../ui/sonner";
 import {
   ContactScene,
-  // DesignScene,
   ExpertiseScene,
   FinalScene,
   HeroScene,
@@ -94,11 +93,6 @@ export function PortfolioPage() {
           scrollContainerRef={scrollContainerRef}
           ui={content.ui}
         />
-        {/*<DesignScene*/}
-        {/*  content={content.design}*/}
-        {/*  scrollContainerRef={scrollContainerRef}*/}
-        {/*  viewProjectLabel={content.ui.viewProject}*/}
-        {/*/>*/}
         <FinalScene
           content={content.final}
           onBackToTop={scrollToTop}

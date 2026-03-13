@@ -21,10 +21,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.snap-y {
-  scroll-snap-type: y mandatory;
-}
-
 .snap-start {
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -42,6 +38,5 @@ body {
 }
 
 section {
-  min-height: 100vh;
   min-height: 100dvh;
 }

@@ -1,9 +1,2 @@
-@import 'tailwindcss' source(none);
-@source '../**/*.{js,ts,jsx,tsx}';
-
-@import 'tw-animate-css';
-
-@theme {
-  --font-family-serif: 'Playfair Display', serif;
-  --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
-}
+@import "tailwindcss";
+@import "tw-animate-css";

@@ -1,13 +1,11 @@
 COMPOSE := docker compose
 SERVICE := portfolio-dev
 
-.PHONY: install run stop down ps logs lint
-
 install:
-	$(COMPOSE) build $(SERVICE)
+	$(COMPOSE) build
 
 run:
-	$(COMPOSE) up -d $(SERVICE)
+	$(COMPOSE) up -d
 
 stop:
 	$(COMPOSE) stop
@@ -22,7 +20,4 @@ logs:
 	$(COMPOSE) logs -f $(SERVICE)
 
 lint:
-	@set -e; \
-		$(COMPOSE) up -d $(SERVICE); \
-		trap '$(COMPOSE) stop $(SERVICE) >/dev/null' EXIT; \
-		$(COMPOSE) exec -T $(SERVICE) npm run lint
+	$(COMPOSE) run --rm $(SERVICE) npm run lint

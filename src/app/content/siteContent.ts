@@ -30,12 +30,6 @@ interface ProjectItem {
   tags: string[];
 }
 
-interface DesignItem {
-  title: string;
-  category: string;
-  image: string;
-}
-
 interface ContactContent {
   title: string;
   description: string;
@@ -98,10 +92,6 @@ export interface SiteContent {
   projects: {
     title: string;
     items: ProjectItem[];
-  };
-  design: {
-    title: string;
-    items: DesignItem[];
   };
   contact: ContactContent;
   final: FinalContent;

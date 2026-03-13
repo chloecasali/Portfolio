@@ -4,6 +4,7 @@ import type { RefObject } from "react";
 const SCROLL_LOCK_MS = 780;
 const WHEEL_THRESHOLD = 70;
 
+// Adds wheel-based section snapping to the scroll container and exposes helpers for manual jumps.
 export function useGuidedSectionScroll(scrollContainerRef: RefObject<HTMLDivElement | null>) {
   const scrollToSection = useCallback(
     (index: number) => {
