@@ -13,7 +13,9 @@ export function useGuidedSectionScroll(scrollContainerRef: RefObject<HTMLDivElem
         return;
       }
 
-      const sections = Array.from(container.querySelectorAll<HTMLElement>("[data-section='true']"));
+      const sections: HTMLElement[] = Array.from(
+        container.querySelectorAll("[data-section='true']")
+      );
       const nextSection = sections[index];
       if (!nextSection) {
         return;
@@ -42,8 +44,8 @@ export function useGuidedSectionScroll(scrollContainerRef: RefObject<HTMLDivElem
     let deltaBuffer = 0;
     let unlockTimer: number | undefined;
 
-    const getSections = () =>
-      Array.from(container.querySelectorAll<HTMLElement>("[data-section='true']"));
+    const getSections = (): HTMLElement[] =>
+      Array.from(container.querySelectorAll("[data-section='true']"));
 
     const getNearestSectionIndex = () => {
       const sections = getSections();
