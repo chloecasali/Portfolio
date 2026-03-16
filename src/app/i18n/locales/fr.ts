@@ -12,10 +12,10 @@ const fr = {
     introduction: {
         title: "Introduction",
         paragraphs: [
-            "Je suis développeuse full-stack et je conçois des applications web robustes et maintenables. J’aborde chaque projet en partant d’un besoin, pour imaginer une solution puis la développer de manière structurée.",
-            "Au fil de mon parcours, j’ai travaillé aussi bien sur le backend que sur le frontend, ce qui me permet aujourd’hui d’avoir une vision globale d’un projet. J’ai également abordé certains aspects liés à l’automatisation et aux environnements de développement, notamment avec Docker et l’intégration continue.",
-            "J’ai aussi eu l’occasion de toucher à l’UI/UX sur certains projets. C’est un aspect qui m’intéresse et qui enrichit ma manière de concevoir les interfaces, même si je souhaite avant tout évoluer en tant que développeuse. Cette sensibilité me permet surtout de créer des produits plus cohérents, plus lisibles et plus pensés dans leur ensemble.",
-            "À travers ce portfolio, je partage une partie de mon parcours, ma façon de travailler, et plusieurs projets qui reflètent mon approche du développement web."
+            "Je suis développeuse full-stack et je conçois des applications web robustes et maintenables. J’aborde chaque projet à partir d’un besoin afin d’imaginer et développer une solution structurée.",
+            "Mon expérience en backend et en frontend me donne une vision globale d’un projet. J’ai également travaillé sur les environnements de développement et l’automatisation, notamment avec Docker et l’intégration continue.",
+            "J’ai aussi abordé l’UI/UX sur certains projets, ce qui enrichit ma manière de concevoir des interfaces cohérentes et lisibles.",
+            "À travers ce portfolio, je partage mon parcours et plusieurs projets qui illustrent mon approche du développement web."
         ],
     },
     expertise: {

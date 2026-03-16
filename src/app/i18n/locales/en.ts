@@ -12,10 +12,10 @@ const en = {
   introduction: {
     title: "Introduction",
     paragraphs: [
-      "I am a full-stack developer, and I design robust, maintainable web applications. I approach each project by starting from a need, imagining a solution, and then developing it in a structured way.",
-      "Throughout my journey, I have worked on both backend and frontend development, which now gives me a global view of a project. I have also explored aspects related to automation and development environments, notably with Docker and continuous integration.",
-      "I have also had the opportunity to work on UI/UX in some projects. It is an area that interests me and enriches the way I design interfaces, even though I primarily want to grow as a developer. This sensitivity mainly helps me create products that are more coherent, more readable, and more thoughtfully designed as a whole.",
-      "Through this portfolio, I share part of my journey, the way I work, and several projects that reflect my approach to web development.",
+      "I am a full-stack developer and I build robust, maintainable web applications. I approach each project by starting from a need and designing a structured solution to implement it.",
+      "My experience in both backend and frontend gives me a global view of a project. I have also worked with development environments and automation, notably using Docker and continuous integration.",
+      "I have also explored UI/UX on some projects, which enriches the way I design clear and coherent interfaces.",
+      "Through this portfolio, I share my background and several projects that reflect my approach to web development.",
     ],
   },
   expertise: {
