@@ -16,17 +16,23 @@ export function IntroductionScene({ content, scrollContainerRef }: IntroductionS
   const reverseY = useTransform(y, (value) => value * -0.55);
 
   return (
-    <section ref={sectionRef} data-section="true" className="relative flex h-screen w-full snap-start items-center justify-center overflow-hidden">
-      <AmbientOrb className="left-[8%] top-[20%] h-[22rem] w-[22rem] bg-[#FA00C4]/16 blur-[120px] dark:bg-[#FA00C4]/20" style={{ opacity, y }} />
-      <AmbientOrb className="bottom-[10%] right-[10%] h-[18rem] w-[18rem] bg-[#FA00C4]/12 blur-[110px] dark:bg-[#FA00C4]/18" style={{ opacity, y: reverseY }} />
+    <section
+      ref={sectionRef}
+      data-section="true"
+      className="relative flex min-h-[100dvh] w-full snap-start items-center justify-center overflow-hidden py-24 sm:py-20"
+    >
+      <AmbientOrb className="left-[-8%] top-[16%] h-[15rem] w-[15rem] bg-[#FA00C4]/14 blur-[95px] dark:bg-[#FA00C4]/18 sm:left-[8%] sm:top-[20%] sm:h-[22rem] sm:w-[22rem] sm:blur-[120px]" style={{ opacity, y }} />
+      <AmbientOrb className="bottom-[8%] right-[-4%] h-[12rem] w-[12rem] bg-[#FA00C4]/10 blur-[85px] dark:bg-[#FA00C4]/14 sm:bottom-[10%] sm:right-[10%] sm:h-[18rem] sm:w-[18rem] sm:blur-[110px]" style={{ opacity, y: reverseY }} />
 
-      <motion.div className="relative z-10 max-w-4xl px-8 md:px-12" style={{ opacity, y }}>
-        <SectionTitle className="mb-12">{content.title}</SectionTitle>
-        <div className="space-y-8 text-lg leading-relaxed md:text-xl">
+      <motion.div className="relative z-10 w-full max-w-3xl px-5 sm:px-8 md:max-w-4xl md:px-12" style={{ opacity, y }}>
+        <SectionTitle className="mb-8 sm:mb-12">
+          {content.title}
+        </SectionTitle>
+        <div className="space-y-6 text-base leading-7 sm:space-y-8 sm:text-lg sm:leading-relaxed md:text-xl">
           {content.paragraphs.map((paragraph, index) => (
             <p
               key={paragraph}
-              className={index === 0 ? "text-black/82 dark:text-white/82" : index === 1 ? "text-black/70 dark:text-white/72" : "text-black/60 dark:text-white/62"}
+              className={`${index === 0 ? "text-black/82 dark:text-white/82" : index === 1 ? "text-black/70 dark:text-white/72" : "text-black/60 dark:text-white/62"} max-w-[62ch] md:mx-auto`}
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
               {paragraph}

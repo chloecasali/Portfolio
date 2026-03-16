@@ -23,16 +23,20 @@ export function WorkflowScene({ content, scrollContainerRef }: WorkflowSceneProp
   const contentVariants = { hidden: { opacity: 0, x: 18 }, show: { opacity: 1, x: 0, transition: { duration: 0.55, delay: 0.1, ease: "easeOut" } } };
 
   return (
-    <section ref={sectionRef} data-section="true" className="relative flex min-h-screen w-full snap-start items-center justify-center overflow-hidden py-20">
-      <AmbientOrb className="left-[10%] top-[16%] h-[18rem] w-[18rem] bg-[#FA00C4]/12 blur-[105px] dark:bg-[#FA00C4]/18" style={{ opacity }} />
+    <section
+      ref={sectionRef}
+      data-section="true"
+      className="relative flex min-h-[100dvh] w-full snap-start items-start justify-center overflow-hidden py-24 sm:items-center sm:py-20"
+    >
+      <AmbientOrb className="left-[-8%] top-[12%] h-[14rem] w-[14rem] bg-[#FA00C4]/10 blur-[90px] dark:bg-[#FA00C4]/16 sm:left-[10%] sm:top-[16%] sm:h-[18rem] sm:w-[18rem] sm:blur-[105px]" style={{ opacity }} />
 
-      <motion.div className="relative z-10 w-full max-w-5xl px-8 md:px-12" style={{ opacity }}>
-        <SectionTitle className="mb-20">{content.title}</SectionTitle>
+      <motion.div className="relative z-10 w-full max-w-5xl px-5 sm:px-8 md:px-12" style={{ opacity }}>
+        <SectionTitle className="mb-12 sm:mb-20">{content.title}</SectionTitle>
         <div className="relative">
           <motion.div className="absolute bottom-0 left-8 top-0 hidden w-px bg-gradient-to-b from-transparent via-[#FA00C4]/30 to-transparent md:block" initial={{ scaleY: 0 }} whileInView={{ scaleY: 1 }} transition={{ duration: 1, delay: 0.3 }} viewport={{ once: true }} />
           <motion.div
             key={contentKey}
-            className="space-y-12"
+            className="space-y-10 sm:space-y-12"
             variants={listVariants}
             initial="hidden"
             whileInView="show"
@@ -41,18 +45,18 @@ export function WorkflowScene({ content, scrollContainerRef }: WorkflowSceneProp
             {content.items.map((step, index) => {
               const Icon = workflowIcons[index];
               return (
-                <motion.div key={step.title} className="relative flex items-start gap-8" variants={itemVariants}>
-                  <motion.div className="relative z-10 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full bg-white/75 backdrop-blur-sm dark:bg-black/70" variants={iconVariants} whileHover={{ scale: 1.1, y: -4 }}>
+                <motion.div key={step.title} className="relative flex items-start gap-4 sm:gap-8" variants={itemVariants}>
+                  <motion.div className="relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-white/75 backdrop-blur-sm dark:bg-black/70 sm:h-16 sm:w-16" variants={iconVariants} whileHover={{ scale: 1.1, y: -4 }}>
                     <div className="absolute inset-[-6px] rounded-full bg-[#FA00C4]/18 blur-xl" />
                     <div className="absolute inset-0 rounded-full bg-[#FA00C4]/20 blur-md" />
                     <div className="absolute inset-[2px] rounded-full bg-white/80 dark:bg-black/80" />
-                    <Icon className="relative z-10 h-7 w-7 text-[#FA00C4]" />
+                    <Icon className="relative z-10 h-5 w-5 text-[#FA00C4] sm:h-7 sm:w-7" />
                     <motion.div className="absolute inset-[-8px] rounded-full bg-[#FA00C4]/12 blur-2xl" animate={{ opacity: [0.35, 0.65, 0.35], scale: [0.95, 1.08, 0.95] }} transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut", delay: index * 0.18 }} />
                   </motion.div>
 
-                  <motion.div className="flex-1 pt-3" variants={contentVariants}>
-                    <h3 className="mb-3 text-2xl text-black dark:text-white md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{step.title}</h3>
-                    <p className="text-lg text-black/70 dark:text-white/70" style={{ fontFamily: "'Inter', sans-serif" }}>{step.description}</p>
+                  <motion.div className="flex-1 pt-1 sm:pt-3" variants={contentVariants}>
+                    <h3 className="mb-2 text-xl text-black dark:text-white sm:mb-3 sm:text-2xl md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{step.title}</h3>
+                    <p className="text-base text-black/70 dark:text-white/70 sm:text-lg" style={{ fontFamily: "'Inter', sans-serif" }}>{step.description}</p>
                   </motion.div>
                 </motion.div>
               );

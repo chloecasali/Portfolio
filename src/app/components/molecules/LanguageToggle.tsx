@@ -18,7 +18,7 @@ export function LanguageToggle({
       <button
         type="button"
         onClick={() => onChange("en")}
-        className={`rounded-full px-3 py-1 text-xs tracking-[0.22em] transition-colors ${
+        className={`rounded-full px-2.5 py-1 text-[0.65rem] tracking-[0.18em] transition-colors sm:px-3 sm:text-xs sm:tracking-[0.22em] ${
           currentLanguage === "en"
             ? "bg-[#FA00C4] text-white"
             : "text-black/55 hover:text-black dark:text-white/55 dark:hover:text-white"
@@ -31,7 +31,7 @@ export function LanguageToggle({
       <button
         type="button"
         onClick={() => onChange("fr")}
-        className={`rounded-full px-3 py-1 text-xs tracking-[0.22em] transition-colors ${
+        className={`rounded-full px-2.5 py-1 text-[0.65rem] tracking-[0.18em] transition-colors sm:px-3 sm:text-xs sm:tracking-[0.22em] ${
           currentLanguage === "fr"
             ? "bg-[#FA00C4] text-white"
             : "text-black/55 hover:text-black dark:text-white/55 dark:hover:text-white"

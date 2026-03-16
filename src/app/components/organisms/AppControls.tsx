@@ -19,12 +19,12 @@ interface AppControlsProps {
 export function AppControls({ language, labels, onLanguageChange, onToggleTheme, theme }: AppControlsProps) {
   return (
     <motion.div
-      className="fixed right-5 top-5 z-50 flex items-center gap-3 rounded-full border border-black/10 bg-white/65 p-2 text-black shadow-[0_20px_60px_rgba(250,0,196,0.12)] backdrop-blur-xl dark:border-white/10 dark:bg-black/35 dark:text-white md:right-8 md:top-8"
+      className="fixed right-3 top-3 z-50 flex max-w-[calc(100vw-1.5rem)] items-center gap-2 rounded-full border border-black/10 bg-white/65 p-1.5 text-black shadow-[0_20px_60px_rgba(250,0,196,0.12)] backdrop-blur-xl dark:border-white/10 dark:bg-black/35 dark:text-white sm:right-5 sm:top-5 sm:gap-3 sm:p-2 md:right-8 md:top-8"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.9, duration: 0.6 }}
     >
-      <div className="flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-2 py-1 dark:border-white/10 dark:bg-white/5">
+      <div className="flex items-center gap-1 rounded-full border border-black/10 bg-white/70 px-1.5 py-1 dark:border-white/10 dark:bg-white/5 sm:gap-2 sm:px-2">
         <LanguageToggle
           currentLanguage={language}
           englishLabel={labels.english}

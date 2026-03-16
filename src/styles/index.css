@@ -40,3 +40,13 @@ body {
 section {
   min-height: 100dvh;
 }
+
+@media (max-width: 767px) {
+  .smooth-scroll-container {
+    scroll-snap-type: y proximity;
+  }
+
+  .snap-start {
+    scroll-snap-stop: normal;
+  }
+}

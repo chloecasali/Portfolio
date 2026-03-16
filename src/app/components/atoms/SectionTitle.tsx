@@ -9,7 +9,7 @@ interface SectionTitleProps {
 export function SectionTitle({ align = "center", children, className = "" }: SectionTitleProps) {
   return (
     <h2
-      className={`text-5xl text-black dark:text-white md:text-7xl ${align === "center" ? "text-center" : "text-left"} ${className}`}
+      className={`text-4xl text-black dark:text-white sm:text-5xl md:text-7xl ${align === "center" ? "text-center" : "text-left"} ${className}`}
       style={{ fontFamily: "'Playfair Display', serif" }}
     >
       {children}

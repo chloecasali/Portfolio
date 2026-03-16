@@ -82,7 +82,7 @@ export function PortfolioPage() {
 
       <div
         ref={scrollContainerRef}
-        className="smooth-scroll-container snap-y relative z-10 h-screen overflow-y-scroll overflow-x-hidden"
+        className="smooth-scroll-container snap-y relative z-10 h-[100dvh] overflow-y-scroll overflow-x-hidden"
       >
         <HeroScene content={content.hero} scrollLabel={content.ui.scroll} />
         <IntroductionScene content={content.introduction} scrollContainerRef={scrollContainerRef} />

@@ -184,27 +184,27 @@ export function ContactScene({ content, scrollContainerRef, ui }: ContactScenePr
       id="contact"
       ref={sectionRef}
       data-section="true"
-      className="relative flex min-h-screen w-full snap-start items-center justify-center overflow-hidden py-20"
+      className="relative flex min-h-[100dvh] w-full snap-start items-start justify-center overflow-hidden py-24 sm:items-center sm:py-20"
     >
       <AmbientOrb
-        className="right-[10%] top-[18%] h-[18rem] w-[18rem] bg-[#FA00C4]/14 blur-[100px] dark:bg-[#FA00C4]/20"
+        className="right-[-8%] top-[14%] h-[14rem] w-[14rem] bg-[#FA00C4]/12 blur-[85px] dark:bg-[#FA00C4]/18 sm:right-[10%] sm:top-[18%] sm:h-[18rem] sm:w-[18rem] sm:blur-[100px]"
         style={{ opacity }}
       />
 
-      <motion.div className="relative z-10 w-full max-w-3xl px-8 md:px-12" style={{ opacity }}>
+      <motion.div className="relative z-10 w-full max-w-3xl px-5 sm:px-8 md:px-12" style={{ opacity }}>
         <motion.div
-          className="mb-16 text-center"
+          className="mb-12 text-center sm:mb-16"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <motion.div className="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-full bg-[#FA00C4]/10">
-            <Mail className="h-10 w-10 text-[#FA00C4]" />
+          <motion.div className="mb-5 inline-flex h-16 w-16 items-center justify-center rounded-full bg-[#FA00C4]/10 sm:mb-6 sm:h-20 sm:w-20">
+            <Mail className="h-8 w-8 text-[#FA00C4] sm:h-10 sm:w-10" />
           </motion.div>
           <SectionTitle className="mb-6">{content.title}</SectionTitle>
           <p
-            className="text-lg text-black/70 dark:text-white/70 md:text-xl"
+            className="text-base leading-relaxed text-black/70 dark:text-white/70 sm:text-lg md:text-xl"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             {content.description}

@@ -8,7 +8,7 @@ interface ScrollIndicatorProps {
 export function ScrollIndicator({ label }: ScrollIndicatorProps) {
   return (
     <motion.div
-      className="absolute bottom-12 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2"
+      className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 sm:flex md:bottom-12"
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1.8, duration: 0.8 }}
