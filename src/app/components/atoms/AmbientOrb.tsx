@@ -1,10 +1,12 @@
 import type { ComponentProps } from "react";
 import { motion } from "motion/react";
 
-type AmbientOrbProps = Pick<
-  ComponentProps<typeof motion.div>,
-  "animate" | "className" | "style" | "transition"
->;
+type AmbientOrbProps = {
+  animate?: ComponentProps<typeof motion.div>["animate"];
+  className?: string;
+  style?: ComponentProps<typeof motion.div>["style"];
+  transition?: ComponentProps<typeof motion.div>["transition"];
+};
 
 export function AmbientOrb({ animate, className, style, transition }: AmbientOrbProps) {
   return (

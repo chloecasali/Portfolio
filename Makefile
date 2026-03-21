@@ -21,3 +21,6 @@ logs:
 
 lint:
 	$(COMPOSE) run --rm $(SERVICE) npm run lint
+
+test:
+	$(COMPOSE) run --rm $(SERVICE) npm run test

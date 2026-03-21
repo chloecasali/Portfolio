@@ -1,6 +1,6 @@
 # Portfolio – Chloe Casali
 
-Interactive portfolio built with React, Vite, Motion, and Tailwind CSS.
+Interactive vibe-coding portfolio built with React, Vite, Motion, and Tailwind CSS.
 
 ## Features
 
@@ -39,6 +39,12 @@ Open `http://localhost:5173`.
 make lint
 ```
 
+### Testing
+
+```bash
+make test
+```
+
 ## Makefile Shortcuts
 
 ```bash
@@ -49,4 +55,5 @@ make logs      # docker compose logs -f portfolio-dev
 make stop      # docker compose stop
 make down      # docker compose down
 make lint      # docker compose run --rm portfolio-dev npm run lint
+make test      # docker compose run --rm portfolio-dev npm run test
 ```
